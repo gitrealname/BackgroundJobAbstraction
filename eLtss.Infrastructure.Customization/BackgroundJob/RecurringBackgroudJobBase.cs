@@ -22,7 +22,7 @@ namespace eLtss.Infrastructure.Customization.BackgroundJob
         public RecurringBackgroundJobDescriptor GetJobDescriptor()
         {
             return new RecurringBackgroundJobDescriptor {
-                JobId = this.GetType().Name,
+                JobId = this.GetType().FullName,
                 CronExpression = _cronExpression,
                 TimeZoneInfo = _timeZoneInfo,
                 QueueName = _queueName
